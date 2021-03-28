@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "code_run_dt"
-version = "0.1.0"
+version = "0.1.1"
 description = "Code Run Data Type"
 authors = ["dev <dev@qiyutech.tech>"]
 readme = "README.md"
