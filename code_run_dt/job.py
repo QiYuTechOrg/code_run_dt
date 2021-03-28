@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Any
 
 from pydantic import BaseModel, Field
 
@@ -11,6 +11,7 @@ class CodeRunJob(BaseModel):
     code: str = Field(..., title="代码")
     args: str = Field(..., title="参数")
     stdin: str = Field(..., title="标准输入")
+    config: Optional[Any] = Field(None, title="运行配置")
 
 
 class CodeRunState(BaseModel):
