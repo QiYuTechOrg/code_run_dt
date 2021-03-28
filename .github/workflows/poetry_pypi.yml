@@ -9,7 +9,7 @@ on:
     types: [ created ]
   push:
     tags:
-      - *
+      - v*
 
 jobs:
   deploy:
