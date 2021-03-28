@@ -7,6 +7,7 @@ __all__ = ["CConfig", "CppConfig", "PythonConfig", "RustConfig"]
 
 class CConfig(BaseModel):
     """C语言运行配置"""
+
     compiler: Union[Literal["gcc", "clang"]] = Field("gcc", title="编译器")
     # 没有则使用最新版本
     version: Optional[str] = Field(None, title="编译器版本")
@@ -16,6 +17,7 @@ class CConfig(BaseModel):
 
 class CppConfig(BaseModel):
     """C++语言运行配置"""
+
     compiler: Literal["g++", "clang++"] = Field("g++", title="编译器")
     # 没有则使用最新版本
     version: Optional[str] = Field(None, title="版本")
@@ -27,6 +29,7 @@ class CppConfig(BaseModel):
 
 class PythonConfig(BaseModel):
     """Python语言运行配置"""
+
     interpreter: Literal["CPython", "PyPy"] = Field(
         "CPython", title="Python 解释器", description="当前还不支持 PyPy"
     )
@@ -36,6 +39,7 @@ class PythonConfig(BaseModel):
 
 class RustConfig(BaseModel):
     """Rust语言运行配置"""
+
     version = Literal["nightly", "beta", "1.51", "1.50"] = Field(
         "1.51", title="Rust 版本", description="默认使用当前稳定版"
     )

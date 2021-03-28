@@ -1,4 +1,4 @@
-from typing import Optional, Any
+from typing import Optional, Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -7,10 +7,13 @@ __all__ = ["CodeRunJob", "CodeRunState"]
 
 class CodeRunJob(BaseModel):
     job_id: str = Field(..., title="任务ID")
-    lang: str = Field(..., title="编程语言")
+    lang: Literal["c", "c++", "python", "rust"] = Field(
+        "c", title="编程语言", description="code 使用的编程语言"
+    )
     code: str = Field(..., title="代码")
     args: str = Field(..., title="参数")
     stdin: str = Field(..., title="标准输入")
+    # run_config 里面的配置
     config: Optional[Any] = Field(None, title="运行配置")
 
 
