@@ -40,6 +40,6 @@ class PythonConfig(BaseModel):
 class RustConfig(BaseModel):
     """Rust语言运行配置"""
 
-    version = Literal["nightly", "beta", "1.51", "1.50"] = Field(
+    version: Literal["nightly", "beta", "1.51", "1.50"] = Field(
         "1.51", title="Rust 版本", description="默认使用当前稳定版"
     )
