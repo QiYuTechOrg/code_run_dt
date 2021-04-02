@@ -9,12 +9,13 @@ __all__ = ["RunTask", "TaskType"]
 class TaskType(str, Enum):
     c_run = "lang:c:run"
     c_asm = "lang:c:asm"  # 获取 asm 代码
-    rust_run = "lang:rust:run"
-    py_run = "lang:python:run"
-    php_run = "lang:php:run"
-    ruby_run = "lang:ruby:run"
-    java_run = "lang:java:run"
     kotlin_run = "lang:kotlin:run"
+    java_run = "lang:java:run"
+    js_run = "lang:javascript:run"
+    php_run = "lang:php:run"
+    py_run = "lang:python:run"
+    ruby_run = "lang:ruby:run"
+    rust_run = "lang:rust:run"
     swift_run = "lang:swift:run"
 
 
