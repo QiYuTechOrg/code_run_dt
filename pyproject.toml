@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "code_run_dt"
-version = "0.3.1"
-description = "Code Run Data Type"
+version = "0.3.2"
+description = "编程乐园类型定义"
 authors = ["dev <dev@qiyutech.tech>"]
 readme = "README.md"
-homepage = "https://www.qiyutech.tech/"
+homepage = "https://run.c-art.tech/"
 
 [tool.poetry.dependencies]
 python = "^3.9"
