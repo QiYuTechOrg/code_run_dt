@@ -10,6 +10,7 @@ __all__ = ["JsTaskConfig", "JsVersion"]
 class JsVersion(str, Enum):
     """Js 版本"""
 
+    v16 = "v16"
     v15 = "v15"
     v14 = "v14"
 

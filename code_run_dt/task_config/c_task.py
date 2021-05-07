@@ -9,6 +9,8 @@ __all__ = ["CTaskConfig", "CRunConfig", "CAsmConfig", "CCompiler"]
 
 
 class CCompiler(str, Enum):
+    gcc_v11_1 = "gcc:v11.1.0"
+    gcc_v10_3 = "gcc:v10.3.0"
     gcc_v10_2 = "gcc:v10.2.0"
     gcc_v10_1 = "gcc:v10.1.0"
 
@@ -32,7 +34,7 @@ class CTaskConfig(BaseModel):
 
     code: str = Field(..., title="C语言代码")
     compiler: CCompiler = Field(
-        CCompiler.gcc_v10_2, title="编译器", description="使用的编译器版本"
+        CCompiler.gcc_v11_1, title="编译器", description="使用的编译器版本"
     )
     asm: Optional[CAsmConfig] = Field(
         None, title="获取汇编", description="asm run 只能有一个不为 None"
